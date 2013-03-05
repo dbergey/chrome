@@ -1,0 +1,122 @@
+html,
+body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	list-style: none;
+	background-color: #f5f3ee;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 500;
+	text-rendering: optimizeLegibility;
+}
+#page-inner {
+	position: relative;
+}
+#copy-logo {
+	background-image: url(/assets/images/options/copycrane.png);
+	width: 1020px;
+	height: 264px;
+	width: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+#tagline {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	list-style: none;
+	text-align: center;
+	font-weight: 200;
+	font-size: 28px;
+	color: #737880;
+	padding: 18px 0;
+	background-color: #F5F3EE;
+}
+#tagline-divider {
+	background-image: url(/assets/images/options/divider_shadow-action.png);
+	width: 1020px;
+	height: 38px;
+	width: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+#page-inner table {
+	width: 680px;
+	margin: 0 auto;
+}
+#page-inner table td {
+	position: relative;
+}
+#page-inner table td.label {
+	clear: left;
+	float: left;
+	text-align: right;
+	font-weight: bold;
+	color: #584F4F;
+	text-shadow: 0 1px 0 white;
+	line-height: 24px;
+	padding: 0 10px 0 0;
+}
+#login-form form {
+	width: 260px;
+}
+#login-form input[type=email], 
+#login-form input[type=text], 
+#login-form input[type=password] {
+	margin: 5px 0;
+	padding: 0;
+	outline: 0;
+	background-color: #E9F3E8;
+	width: 260px;
+	font: 16px/20px "Helvetica Neue","Helvetica","Arial",sans-serif;
+	border: 1px solid #B4B9C1;
+	box-shadow: 0 1px 0 white;
+	border-radius: 4px;
+	color: #1491AD;
+	padding: 8px;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#login-form input[type=email]:focus,
+#login-form input[type=password]:focus {
+	background-color: white;
+	outline: none;
+	box-shadow: 0 0 10px #69bed7;
+}
+#login-form input[type=submit] {
+	color: white;
+	height: 44px;
+	cursor: pointer;
+	margin: 5px 0;
+	width: 260px;
+	text-decoration: none;
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(#69BED7,#117E96);
+	background-color: #69BED7;
+	border: 1px solid #B4B9C1;
+	font: 400 20px "Helvetica Neue","Helvetica","Arial",sans-serif;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+#login-form input[type=submit]:hover {
+	background: #69bed7;
+}
+#login-form input[type=submit]:active {
+	text-shadow: -1px -1px 1px #ce4c1f;
+	background: #f15a25;
+}
+#forgot-password {
+	margin: 5px 5px 15px 5px;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	color: #1491AD;
+	text-decoration: none;
+}

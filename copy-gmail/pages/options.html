@@ -1,21 +1,49 @@
 <html>
-<head><title>My Test Extension Options</title></head>
+<head>
+<title>Copy for Gmail Options</title>
+<link href="/assets/css/options.css" rel="stylesheet">
+<script type="text/javascript" src="/assets/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/options.js"></script>
+</head>
 
 <body>
+<div id="page-top"></div>
 
-Favorite Color:
-<select id="color">
- <option value="red">red</option>
- <option value="green">green</option>
- <option value="blue">blue</option>
- <option value="yellow">yellow</option>
-</select>
+<div id="page-inner">
+	<div id="copy-logo"></div>
 
-<br>
-<div id="status"></div>
-<button id="save">Save</button>
+	<div id="tagline-wrapper">
+		<p id="tagline">Copy for Chrome</p>
+		<div id="tagline-divider"></div>
+	</div>
+
+	<table>
+		<tr>
+			<td class="label">Login to Copy</td>
+			<td id="login-form">
+				<form method="POST" action="/">
+	 
+					<input type="email" name="username" value="" required placeholder="User Email"><br />
+					<input type="password" name="password" value="" autocomplete="off" required placeholder="Password"><br />
+					<input type="submit" name="login" value="Log In"><br />
+					<a href="https://www.copy.com/auth/forgot_password/?username=" id="forgot-password">Forgot password?</a>
+				</form>
+			</td>
+		</tr>
+	</table>
+
+	<!--Favorite Color:
+	<select id="color">
+		<option value="red">red</option>
+		<option value="green">green</option>
+		<option value="blue">blue</option>
+		<option value="yellow">yellow</option>
+	</select>
+	<br>
+	<div id="status"></div>
+	<button id="save">Save</button>-->
+</div>
+
+<div id="page-bottom"></div>
 </body>
-
-<script src="/js/options.js"></script>
-
 </html>
