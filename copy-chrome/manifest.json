@@ -1,10 +1,10 @@
 {
-	"name": "Copy for Gmail",
+	"name": "Copy for Chrome",
 	"version": "1.0",
 	"manifest_version": 2,
-	"description": "Send files through Gmail by way of using copy. Send large files right through the browser.",
+	"description": "Send files through Gmail by way of using copy. Send large files through the browser. Save images and text snippets.",
 	"homepage_url": "https://www.copy.com",
-	"options_page": "pages/options.html"
+	"options_page": "pages/options.html",
 	"icons": {
 		"16": "assets/images/icons/16.png",
 		"48": "assets/images/icons/48.png",
