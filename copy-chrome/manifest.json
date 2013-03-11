@@ -5,6 +5,10 @@
 	"description": "Send files through Gmail by way of using copy. Send large files through the browser. Save images and text snippets.",
 	"homepage_url": "https://www.copy.com",
 	"options_page": "pages/options.html",
+	"permissions": [
+		"http://api.copy.lithium/",
+		"https://api.copy.com/"
+	],
 	"icons": {
 		"16": "assets/images/icons/16.png",
 		"48": "assets/images/icons/48.png",
