@@ -1,7 +1,7 @@
 var copy = {
 	init: function( options ) {
 		copy.config = {
-			cloudAddress: 'http://api.copy.lithium/jsonrpc',
+			cloudAddress: 'http://api.dev.copy.com/jsonrpc',
 			debugMode: 1, // 1 to show console messages 0 to hide
 		};
 
@@ -27,36 +27,50 @@ var copy = {
 			'params': params,
 		};
 
-		$.ajax({
-			dataType: 'json',
-			data: JSON.stringify(params),
-			headers: {
-				'X-Client-Type': 'api',
-				'X-Api-Version': '1.0',
-			},
-			type: 'POST',
-			url: copy.config.cloudAddress,
-		})
-		.done( function( data, textStatus, jqXHR ) {
-			return data;
-		})
-		.fail( function ( jqXHR, textStatus, errorThrown ) {
-			return false;
-		});
+		try
+		{
+			apiResultXhr = $.ajax({
+				async: false, // TODO: when an async method is need ad an array and check for existance
+				dataType: 'json',
+				data: JSON.stringify(params),
+				headers: {
+					'X-Client-Type': 'api',
+					'X-Api-Version': '1.0',
+				},
+				type: 'POST',
+				url: copy.config.cloudAddress,
+			})
+			.fail( function( jqXHR, textStatus, thrownError ) {
+				copy.debug( textStatus );
+				copy.debug( jqXHR );
+			})
+			.always( function( data ) {
+				if (data.id != params.id)
+					throw new Error('Return id does not match request id');
+			});
+		}
+		catch (e)
+		{
+			copy.debug(e.name + ': ' + e.message);
+		}
+
+		return apiResultXhr;
 	},
 
 	login: function ( email, password ) {
-		var user = copy.apiRequest('auth_user', { 'username': email, 'password': password });
-
-		if (!user) {
-			delete user;
-			return false;
-		}
-
-		copy.user = {
-			'first_name': user.first_name,
-			'last_name': user.last_name,
-		};
+		copy.apiRequest(
+			'auth_user',
+			{
+				'username': email,
+				'password': password
+			}
+		)
+		.done( function( data, textStatus, jqXHR ) {
+			/*copy.user = {
+				'first_name': data.first_name,
+				'last_name': data.last_name,
+			};*/
+		});
 	}
 }
 
